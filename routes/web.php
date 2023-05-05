@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Routes used in vue router
+ * @var array $aRoutes
+ */
+$aRoutes = [
+    'app'       => '',
+    'app.index' => '/app'
+];
+
+foreach ($aRoutes as $sRouteName => $sVueRoute) {
+    Route::get($sVueRoute, function() {
+        return view('app');
+    })->name($sRouteName);
+}
