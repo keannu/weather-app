@@ -185,4 +185,14 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'api'             => [
+        'open_weather' => [
+            'url'    => env('OPEN_WEATHER_URL', 'https://api.openweathermap.org/data/2.5/weather'),
+            'app_id' => env('OPEN_WEATHER_APP_ID', '3779e43c870f6c78a85da645b119fc2a')
+        ],
+        'four_square'  => [
+            'url'     => env('FOUR_SQUARE_URL', 'https://api.foursquare.com/v3/places/nearby'),
+            'api_key' => env('FOUR_SQUARE_API_KEY', 'fsq345DA+Uu93Cx+FYiFtUSAVuGjdBxqeiJ05DB2gNsU8zE=')
+        ]
+    ]
 ];
