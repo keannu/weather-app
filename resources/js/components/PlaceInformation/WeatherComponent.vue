@@ -1,8 +1,8 @@
 <template>
-    <section class="bg-secondary">
+    <section style="background-color: #06283D;">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-md-8 col-sm-12">
+                <div class="col-xl-8 col-lg-10 col-md-11 col-sm-10">
                     <div class="card" style="color: #4B515D; border-radius: 35px;">
                         <div class="card-body p-4">
                             <div class="d-flex">
@@ -18,9 +18,8 @@
                                     <b-icon-cloud-rain v-else-if="(sWeatherMain === 'Rain')"></b-icon-cloud-rain>
                                     <b-icon-three-dots v-else></b-icon-three-dots>
                                 </div>
-                            
                                 <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;">{{ oWeather.temp }}</h6>
-                                <span class="h5" style="color: #868B94">{{ oWeather.type.main || '' }}</span>
+                                <span class="h5" style="color: #868B94">{{ sWeatherMain }}</span>
                                 <span class="small" style="color: #868B94">{{ oWeather.type.description || '' }}</span>
                             </div>
                             <div class="d-flex align-items-center">
@@ -33,8 +32,6 @@
                                     <p class="py-0 my-0 fs-6"><strong class="ms-1">Max Temperature: </strong>{{ oWeather.temp_max }}</p>
                                     <p class="py-0 my-0 fs-6"><strong class="ms-1">Rain Volume (1h): </strong>{{ oWeather.rain }}</p>
                                     <p class="py-0 my-0 fs-6"><strong class="ms-1">Snow Volume (1h): </strong>{{ oWeather.snow }}</p>
-                                </div>
-                                <div>
                                 </div>
                             </div>
                         </div>

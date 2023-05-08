@@ -37,6 +37,7 @@ class PlaceInformationController
     public function getCityInformation(GetPlaceInformationRequest $oGetPlaceInformationRequest)
     {
         $aResult = $this->oPlaceInformationService->getCityInformation($oGetPlaceInformationRequest->validated());
+        
         return response()->json($aResult['data'], $aResult['code']);
     }
 }

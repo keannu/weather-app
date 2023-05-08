@@ -32,7 +32,7 @@ class GetPlaceInformationRequest extends FormRequest
     public function rules() : array
     {
         return [
-            'city' => ['required', 'string', Rule::in('Tokyo', 'Yokohama', 'Kyoto', 'Osaka', 'Sapporo', 'Nagoya')]
+            'city' => [ 'required', 'string', Rule::in('Tokyo', 'Yokohama', 'Kyoto', 'Osaka', 'Sapporo', 'Nagoya') ]
         ];
     }
 }

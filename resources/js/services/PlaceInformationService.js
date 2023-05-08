@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const oPlaceInfoServiceApiClient = axios.create({
-    baseURL : '/api/place/info',
-    headers : {
-        Accept : 'application/json',
-        'Content-Type' : 'application/json'
+    baseURL: '/api/place/info',
+    headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
     }
 });
 

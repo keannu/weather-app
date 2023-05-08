@@ -14,6 +14,12 @@ use App\Repositories\BaseRepository;
 class FourSquareRepository extends BaseRepository
 {
     /**
+     * HEADER_ACCEPT
+     * @const string
+     */
+    const HEADER_ACCEPT = 'application/json';
+
+    /**
      * FourSquareRepository constructor
      */
     public function __construct()
@@ -30,7 +36,7 @@ class FourSquareRepository extends BaseRepository
     {
         return $this->getApiResponse([
             'headers'    => [
-                'Accept' => 'application/json',
+                'Accept'        => self::HEADER_ACCEPT,
                 'Authorization' => (string)config('app.api.four_square.api_key')
             ],
             'parameters' => [ 'll' => $sParameter ]

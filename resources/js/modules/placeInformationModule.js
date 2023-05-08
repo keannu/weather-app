@@ -43,7 +43,6 @@ const actions = {
         commit('SET_NEARBY_PLACES', []);
         await PlaceInformationService.getPlaceInformation(sCity)
             .then(oResponse => {
-                console.log(oResponse);
                 if (oResponse.status === 200) {
                     commit('SET_WEATHER', oResponse.data.weather);
                     commit('SET_NEARBY_PLACES', oResponse.data.nearby_places);

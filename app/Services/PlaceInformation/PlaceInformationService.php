@@ -83,7 +83,6 @@ class PlaceInformationService
                     'description' => ''
                 ])),
                 'temp'       => Arr::get($aWeather, 'main.temp', 0) . '°C',
-                'feels_like' => Arr::get($aWeather, 'main.feels_like', 0) . '°C',
                 'humidity'   => Arr::get($aWeather, 'main.humidity', 0) . '%',
                 'temp_min'   => Arr::get($aWeather, 'main.temp_min', 0) . '°C',
                 'temp_max'   => Arr::get($aWeather, 'main.temp_max', 0) . '°C',

@@ -14,10 +14,10 @@ use App\Repositories\BaseRepository;
 class OpenWeatherRepository extends BaseRepository
 {
     /**
-     * UNIT
+     * UNIT_OF_MEASURE
      * @const string
      */
-    const UNIT = 'metric';
+    const UNIT_OF_MEASURE = 'metric';
 
     /**
      * OpenWeatherRepository constructor
@@ -39,7 +39,7 @@ class OpenWeatherRepository extends BaseRepository
             'parameters' => [
                 'q'     => $sCity,
                 'appid' => (string)config('app.api.open_weather.app_id'),
-                'units' => self::UNIT
+                'units' => self::UNIT_OF_MEASURE
             ]
         ]);
     }
